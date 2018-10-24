@@ -24,18 +24,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EOSIO/eosjs.git"
+    "url": "git+https://github.com/Game-X-Coin/eosjs-rn.git"
   },
   "keywords": [
     "EOS",
-    "Blockchain"
+    "Blockchain",
+    "React Native"
   ],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/EOSIO/eosjs/issues"
+    "url": "https://github.com/Game-X-Coin/eosjs-rn/issues"
   },
-  "homepage": "https://github.com/EOSIO/eosjs#readme",
+  "homepage": "https://github.com/Game-X-Coin/eosjs-rn#readme",
   "devDependencies": {
     "babel-cli": "6.26.0",
     "babel-core": "6.26.3",

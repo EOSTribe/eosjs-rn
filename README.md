@@ -89,7 +89,7 @@ eos = Eos({keyPrefix: 'PUB'})
 eos = Eos.modules.api({/*config*/})
 
 // Read-only instance when an application never needs to write (smaller library)
-EosApi = require('eosjs-api')
+EosApi = require('eosjs-api-rn')
 eos = EosApi({/*config*/})
 ```
 
