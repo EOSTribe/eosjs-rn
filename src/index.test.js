@@ -200,7 +200,7 @@ describe('Contract', () => {
     it(`deploy ${contract}@${account}`, async function() {
       this.timeout(4000)
       // console.log('todo, skipping deploy ' + `${contract}@${account}`)
-      const config = {binaryen: require("binaryen"), keyProvider: wif}
+      const config = {keyProvider: wif}
       const eos = Eos(config)
 
       const wasm = fs.readFileSync(`docker/contracts/${contract}/${contract}.wasm`)

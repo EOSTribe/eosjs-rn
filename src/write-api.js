@@ -1,8 +1,7 @@
 const assert = require('assert')
-const ecc = require('eosjs-ecc')
-const Fcbuffer = require('fcbuffer')
-const createHash = require('create-hash')
-const {processArgs} = require('eosjs-api')
+const ecc = require('eosjs-ecc-rn')
+const Fcbuffer = require('fcbuffer-rn')
+const {processArgs} = require('eosjs-api-rn')
 const Structs = require('./structs')
 
 module.exports = writeApiGen
@@ -493,7 +492,7 @@ function WriteApi(Network, network, config, Transaction) {
     const buf = Fcbuffer.toBuffer(Transaction, txObject)
     const tr = Transaction.toObject(txObject)
 
-    const transactionId  = createHash('sha256').update(buf).digest().toString('hex')
+    const transactionId  = ecc.sha256(buf, 'hex')
 
     let sigs = []
     if(options.sign){

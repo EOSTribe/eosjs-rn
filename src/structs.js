@@ -1,5 +1,5 @@
-const {Signature, PublicKey} = require('eosjs-ecc')
-const Fcbuffer = require('fcbuffer')
+const {Signature, PublicKey} = require('eosjs-ecc-rn')
+const Fcbuffer = require('fcbuffer-rn')
 const ByteBuffer = require('bytebuffer')
 const assert = require('assert')
 
@@ -44,7 +44,7 @@ module.exports = (config = {}, extendedSchema) => {
   const override = Object.assign({},
     authorityOverride(config),
     abiOverride(structLookup),
-    wasmCodeOverride(config),
+    // wasmCodeOverride(config),
     actionDataOverride(structLookup, forceActionDataHex),
     config.override
   )
@@ -522,27 +522,27 @@ const abiOverride = structLookup => ({
   }
 })
 
-const wasmCodeOverride = config => ({
-  'setcode.code.fromObject': ({object, result}) => {
-    try {
-      const code = object.code.toString()
-      if(/^\s*\(module/.test(code)) {
-        const {binaryen} = config
-        assert(binaryen != null, 'required: config.binaryen = require("binaryen")')
-        if(config.debug) {
-          console.log('Assembling WASM..')
-        }
-        const wasm = Buffer.from(binaryen.parseText(code).emitBinary())
-        result.code = wasm
-      } else {
-        result.code = object.code
-      }
-    } catch(error) {
-      console.error(error, object.code)
-      throw error
-    }
-  }
-})
+// const wasmCodeOverride = config => ({
+//   'setcode.code.fromObject': ({object, result}) => {
+//     try {
+//       const code = object.code.toString()
+//       if(/^\s*\(module/.test(code)) {
+//         const {binaryen} = config
+//         assert(binaryen != null, 'required: config.binaryen = require("binaryen")')
+//         if(config.debug) {
+//           console.log('Assembling WASM..')
+//         }
+//         const wasm = Buffer.from(binaryen.parseText(code).emitBinary())
+//         result.code = wasm
+//       } else {
+//         result.code = object.code
+//       }
+//     } catch(error) {
+//       console.error(error, object.code)
+//       throw error
+//     }
+//   }
+// })
 
 /**
   Nested serialized structure.  Nested struct may be in HEX or object format.
