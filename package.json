@@ -60,21 +60,5 @@
     "eosjs-api": "7.0.4",
     "eosjs-ecc": "4.0.4",
     "fcbuffer": "2.2.2"
-  },
-  "babel": {
-    "presets": [
-      "es2015"
-    ],
-    "plugins": [
-      "syntax-async-functions",
-      "transform-regenerator",
-      [
-        "transform-runtime",
-        {
-          "polyfill": false,
-          "regenerator": true
-        }
-      ]
-    ]
   }
 }
