@@ -20,15 +20,15 @@ Prior [version](./docs/prior_versions.md) matrix.
 
 ```html
 <!--
-sha512-fqmNgLjSEhMSiGW9Tkv735UpvnPPKlaVOHgYwrOEhzRbzcsB5z7g2zHYtAOKgIOYNkGg3Q3CBfJapbVU9lzbpA== lib/eos.js
-sha512-zhPSKFEBlDVvUzjl9aBS66cI8tDYoLetynuKvIekHT8NZZ12oxwcZ//M/eT/2Rb/pR/cjFvLD8104Cy//sdEnA== lib/eos.min.js
-sha512-VKOxq8R14PpPh4nbLvD8DtxxTv1UmZp7pb3+P8IOQ36m3PBJpm6cd8pI8WRI6d9/aozwADKb3HSFQ7A8s+OhSA== lib/eos.min.js.map
+sha512-VL4prAbk80la9G0sjjbPWfuj1LIoOLLiPPI30v5E3pm2NKoVcLDJd5dd2qK052hkHX6QgbzNhj+vu0gNMXc2UA== lib/eos.js
+sha512-OwwkGndonYG3fUfrCLxhT3Oe/9ReK3AGiOL6He/Odq45uWtTbikA16y8qRExw1ZouQ8cm7/4vV9cNQ/L/0CUAg== lib/eos.min.js
+sha512-jn8sR15/7bNUi3J5Rxhs02ICwxAOAMxt040upt1h6JcP/OYP21nWPGMNmTvhoPn+EGLy+JKN7GXnoQG8VF743A== lib/eos.min.js.map
 -->
 <html>
 <head>
   <meta charset="utf-8">
   <script src="https://cdn.jsdelivr.net/npm/eosjs@16.0.9/lib/eos.min.js"
-    integrity="sha512-zhPSKFEBlDVvUzjl9aBS66cI8tDYoLetynuKvIekHT8NZZ12oxwcZ//M/eT/2Rb/pR/cjFvLD8104Cy//sdEnA=="
+    integrity="sha512-OwwkGndonYG3fUfrCLxhT3Oe/9ReK3AGiOL6He/Odq45uWtTbikA16y8qRExw1ZouQ8cm7/4vV9cNQ/L/0CUAg=="
     crossorigin="anonymous"></script>
 
   <script>
