@@ -4,7 +4,7 @@ const fs = require('fs')
 
 const Eos = require('.')
 const {ecc} = Eos.modules
-const {Keystore} = require('eosjs-keygen')
+// const {Keystore} = require('eosjs-keygen')
 
 const wif = '5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3'
 
@@ -311,12 +311,12 @@ describe('keyProvider', () => {
     })
   })
 
-  it('from eosjs-keygen', () => {
-    const keystore = Keystore('uid')
-    keystore.deriveKeys({parent: wif})
-    const eos = Eos({keyProvider: keystore.keyProvider})
-    return eos.transfer('inita', 'initb', '12.0000 SYS', '', true)
-  })
+//   it('from eosjs-keygen', () => {
+//     const keystore = Keystore('uid')
+//     keystore.deriveKeys({parent: wif})
+//     const eos = Eos({keyProvider: keystore.keyProvider})
+//     return eos.transfer('inita', 'initb', '12.0000 SYS', '', true)
+//   })
 
   it('return Promise', () => {
     const eos = Eos({keyProvider: new Promise(resolve => {resolve(wif)})})
